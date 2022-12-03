@@ -6,6 +6,10 @@ import {
   scoreAmendedStrategy,
   scoreStrategy,
 } from "./day02/rock-paper-scissorsor"
+import {
+  findGroupPriorities,
+  findMispackPriorities,
+} from "./day03/back-pack-packer"
 
 const PORT = 3000
 
@@ -31,5 +35,7 @@ app.get("/day01/a", handlerWrapper("1", countCalories))
 app.get("/day01/b", handlerWrapper("1", countTopThreeCalories))
 app.get("/day02/a", handlerWrapper("2", scoreStrategy))
 app.get("/day02/b", handlerWrapper("2", scoreAmendedStrategy))
+app.get("/day03/a", handlerWrapper("3", findMispackPriorities))
+app.get("/day03/b", handlerWrapper("3", findGroupPriorities))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
