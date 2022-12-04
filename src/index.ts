@@ -10,6 +10,10 @@ import {
   findGroupPriorities,
   findMispackPriorities,
 } from "./day03/back-pack-packer"
+import {
+  findCompleteOverlaps,
+  findParialOverlaps,
+} from "./day04/cleaning-scheduler"
 
 const PORT = 3000
 
@@ -37,5 +41,7 @@ app.get("/day02/a", handlerWrapper("2", scoreStrategy))
 app.get("/day02/b", handlerWrapper("2", scoreAmendedStrategy))
 app.get("/day03/a", handlerWrapper("3", findMispackPriorities))
 app.get("/day03/b", handlerWrapper("3", findGroupPriorities))
+app.get("/day04/a", handlerWrapper("4", findCompleteOverlaps))
+app.get("/day04/b", handlerWrapper("4", findParialOverlaps))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
