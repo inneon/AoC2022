@@ -14,6 +14,10 @@ import {
   findCompleteOverlaps,
   findParialOverlaps,
 } from "./day04/cleaning-scheduler"
+import {
+  stackSuppliesCrateMover9000,
+  stackSuppliesCrateMover9001,
+} from "./day05/supply-stacker"
 
 const PORT = 3000
 
@@ -43,5 +47,7 @@ app.get("/day03/a", handlerWrapper("3", findMispackPriorities))
 app.get("/day03/b", handlerWrapper("3", findGroupPriorities))
 app.get("/day04/a", handlerWrapper("4", findCompleteOverlaps))
 app.get("/day04/b", handlerWrapper("4", findParialOverlaps))
+app.get("/day05/a", handlerWrapper("5", stackSuppliesCrateMover9000))
+app.get("/day05/b", handlerWrapper("5", stackSuppliesCrateMover9001))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
