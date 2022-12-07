@@ -22,6 +22,10 @@ import {
   findStartOfPacket,
   findStartOfMessage,
 } from "./day06/communication-tuner"
+import {
+  findSmallestFileToDelete,
+  findSmallFileSystems,
+} from "./day07/file-system-parser"
 
 const PORT = 3000
 
@@ -55,5 +59,7 @@ app.get("/day05/a", handlerWrapper("5", stackSuppliesCrateMover9000))
 app.get("/day05/b", handlerWrapper("5", stackSuppliesCrateMover9001))
 app.get("/day06/a", handlerWrapper("6", findStartOfPacket))
 app.get("/day06/b", handlerWrapper("6", findStartOfMessage))
+app.get("/day07/a", handlerWrapper("7", findSmallFileSystems))
+app.get("/day07/b", handlerWrapper("7", findSmallestFileToDelete))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
