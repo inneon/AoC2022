@@ -26,6 +26,10 @@ import {
   findSmallestFileToDelete,
   findSmallFileSystems,
 } from "./day07/file-system-parser"
+import {
+  findMostScenicTree,
+  findNumberOfVisibleTrees,
+} from "./day08/forrest-mapper"
 
 const PORT = 3000
 
@@ -61,5 +65,7 @@ app.get("/day06/a", handlerWrapper("6", findStartOfPacket))
 app.get("/day06/b", handlerWrapper("6", findStartOfMessage))
 app.get("/day07/a", handlerWrapper("7", findSmallFileSystems))
 app.get("/day07/b", handlerWrapper("7", findSmallestFileToDelete))
+app.get("/day08/a", handlerWrapper("8", findNumberOfVisibleTrees))
+app.get("/day08/b", handlerWrapper("8", findMostScenicTree))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
