@@ -30,6 +30,10 @@ import {
   findMostScenicTree,
   findNumberOfVisibleTrees,
 } from "./day08/forrest-mapper"
+import {
+  findMostActiveMonkies,
+  findMostActiveMonkiesII,
+} from "./day11/monkey-tracker"
 
 const PORT = 3000
 
@@ -67,5 +71,7 @@ app.get("/day07/a", handlerWrapper("7", findSmallFileSystems))
 app.get("/day07/b", handlerWrapper("7", findSmallestFileToDelete))
 app.get("/day08/a", handlerWrapper("8", findNumberOfVisibleTrees))
 app.get("/day08/b", handlerWrapper("8", findMostScenicTree))
+app.get("/day11/a", handlerWrapper("11", findMostActiveMonkies))
+app.get("/day11/b", handlerWrapper("11", findMostActiveMonkiesII))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
