@@ -36,6 +36,10 @@ import {
 } from "./day11/monkey-tracker"
 import { drawScreen, simulateSystem } from "./day10/coms-system-simulator"
 import { climbHill, steepestElevationSteps } from "./day12/hill-climber"
+import {
+  findDecoderKey,
+  getCorrectlyOrderedMessages,
+} from "./day13/code-descrambler"
 
 const PORT = 3000
 
@@ -79,5 +83,7 @@ app.get("/day11/a", handlerWrapper("11", findMostActiveMonkies))
 app.get("/day11/b", handlerWrapper("11", findMostActiveMonkiesII))
 app.get("/day12/a", handlerWrapper("12", climbHill))
 app.get("/day12/b", handlerWrapper("12", steepestElevationSteps))
+app.get("/day13/a", handlerWrapper("13", getCorrectlyOrderedMessages))
+app.get("/day13/b", handlerWrapper("13", findDecoderKey))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
