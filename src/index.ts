@@ -35,6 +35,7 @@ import {
   findMostActiveMonkiesII,
 } from "./day11/monkey-tracker"
 import { drawScreen, simulateSystem } from "./day10/coms-system-simulator"
+import { climbHill, steepestElevationSteps } from "./day12/hill-climber"
 
 const PORT = 3000
 
@@ -76,5 +77,7 @@ app.get("/day10/a", handlerWrapper("10", simulateSystem))
 app.get("/day10/b", handlerWrapper("10", drawScreen))
 app.get("/day11/a", handlerWrapper("11", findMostActiveMonkies))
 app.get("/day11/b", handlerWrapper("11", findMostActiveMonkiesII))
+app.get("/day12/a", handlerWrapper("12", climbHill))
+app.get("/day12/b", handlerWrapper("12", steepestElevationSteps))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
