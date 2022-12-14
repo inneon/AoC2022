@@ -1,3 +1,4 @@
+import { makeGrid } from "../helpers/grid-makes"
 import { Queue } from "../helpers/queue"
 
 interface Coord {
@@ -70,13 +71,9 @@ const distanceBetween = (grid: string[][], start: Coord, end: Coord) => {
     { ...start, dist: 0, path: [start] },
   ])
 
-  const explored: boolean[][] = Array(grid.length)
-    .fill(null)
-    .map((_) => Array(grid[0].length).fill(false))
+  const explored: boolean[][] = makeGrid(grid[0].length, grid.length, false)
 
-  const distMap: number[][] = Array(grid.length)
-    .fill(null)
-    .map((_) => Array(grid[0].length).fill(0))
+  const distMap: number[][] = makeGrid(grid[0].length, grid.length, 0)
 
   const inBounds = (x: number, y: number) => {
     return 0 <= x && x < grid[0].length && 0 <= y && y < grid.length
