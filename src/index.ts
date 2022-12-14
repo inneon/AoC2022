@@ -40,6 +40,10 @@ import {
   findDecoderKey,
   getCorrectlyOrderedMessages,
 } from "./day13/code-descrambler"
+import {
+  getMaximumSandUnits,
+  getMaximumSandUnitsWithFloor,
+} from "./day14/reservoir-fillter"
 
 const PORT = 3000
 
@@ -85,5 +89,7 @@ app.get("/day12/a", handlerWrapper("12", climbHill))
 app.get("/day12/b", handlerWrapper("12", steepestElevationSteps))
 app.get("/day13/a", handlerWrapper("13", getCorrectlyOrderedMessages))
 app.get("/day13/b", handlerWrapper("13", findDecoderKey))
+app.get("/day14/a", handlerWrapper("14", getMaximumSandUnits))
+app.get("/day14/b", handlerWrapper("14", getMaximumSandUnitsWithFloor))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
