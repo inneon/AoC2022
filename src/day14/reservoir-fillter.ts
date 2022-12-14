@@ -1,4 +1,4 @@
-import { makeGrid } from "../helpers/grid-makes"
+import { makeGrid } from "../helpers/grid-maker"
 import { zip } from "../helpers/zip"
 
 export const getMaximumSandUnits = (input: string): number => {

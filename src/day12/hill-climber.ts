@@ -1,4 +1,4 @@
-import { makeGrid } from "../helpers/grid-makes"
+import { makeGrid } from "../helpers/grid-maker"
 import { Queue } from "../helpers/queue"
 
 interface Coord {
