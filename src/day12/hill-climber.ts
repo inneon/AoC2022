@@ -1,10 +1,6 @@
+import { Coord } from "../helpers/coord"
 import { makeGrid } from "../helpers/grid-maker"
 import { Queue } from "../helpers/queue"
-
-interface Coord {
-  x: number
-  y: number
-}
 
 const findStartAndEnd = (grid: string[][]) => {
   let start: Coord | null = null
