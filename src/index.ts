@@ -44,6 +44,7 @@ import {
   getMaximumSandUnits,
   getMaximumSandUnitsWithFloor,
 } from "./day14/reservoir-fillter"
+import { findNonBeaconSpaces, getTuningFrequency } from "./day15/beacon-finder"
 
 const PORT = 3000
 
@@ -91,5 +92,7 @@ app.get("/day13/a", handlerWrapper("13", getCorrectlyOrderedMessages))
 app.get("/day13/b", handlerWrapper("13", findDecoderKey))
 app.get("/day14/a", handlerWrapper("14", getMaximumSandUnits))
 app.get("/day14/b", handlerWrapper("14", getMaximumSandUnitsWithFloor))
+app.get("/day15/a", handlerWrapper("15", findNonBeaconSpaces(2000000)))
+app.get("/day15/b", handlerWrapper("15", getTuningFrequency(4000000)))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
