@@ -45,6 +45,7 @@ import {
   getMaximumSandUnitsWithFloor,
 } from "./day14/reservoir-fillter"
 import { findNonBeaconSpaces, getTuningFrequency } from "./day15/beacon-finder"
+import { calculateMaxFlow } from "./day17/tunnel-valve-opener"
 
 const PORT = 3000
 
@@ -94,5 +95,6 @@ app.get("/day14/a", handlerWrapper("14", getMaximumSandUnits))
 app.get("/day14/b", handlerWrapper("14", getMaximumSandUnitsWithFloor))
 app.get("/day15/a", handlerWrapper("15", findNonBeaconSpaces(2000000)))
 app.get("/day15/b", handlerWrapper("15", getTuningFrequency(4000000)))
+app.get("/day16/a", handlerWrapper("16", calculateMaxFlow))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
