@@ -31,6 +31,10 @@ import {
   findNumberOfVisibleTrees,
 } from "./day08/forrest-mapper"
 import {
+  countLongTailVisitedSpaces,
+  countTailVisitedSpaces,
+} from "./day09/rope-simulator"
+import {
   findMostActiveMonkies,
   findMostActiveMonkiesII,
 } from "./day11/monkey-tracker"
@@ -83,6 +87,8 @@ app.get("/day07/a", handlerWrapper("7", findSmallFileSystems))
 app.get("/day07/b", handlerWrapper("7", findSmallestFileToDelete))
 app.get("/day08/a", handlerWrapper("8", findNumberOfVisibleTrees))
 app.get("/day08/b", handlerWrapper("8", findMostScenicTree))
+app.get("/day09/a", handlerWrapper("9", countTailVisitedSpaces))
+app.get("/day09/b", handlerWrapper("9", countLongTailVisitedSpaces))
 app.get("/day10/a", handlerWrapper("10", simulateSystem))
 app.get("/day10/b", handlerWrapper("10", drawScreen))
 app.get("/day11/a", handlerWrapper("11", findMostActiveMonkies))
